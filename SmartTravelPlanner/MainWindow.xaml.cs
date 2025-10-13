@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SmartTravelPlanner1
+namespace SmartTravelPlanner
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

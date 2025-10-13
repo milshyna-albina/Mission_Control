@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SmartTravelPlanner1.Properties
+namespace SmartTravelPlanner.Properties
 {
 
 
