@@ -103,7 +103,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
+    <Resource Include="images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\load_map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\clear-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

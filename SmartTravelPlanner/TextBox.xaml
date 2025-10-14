@@ -6,15 +6,25 @@
              xmlns:local="clr-namespace:SmartTravelPlanner"
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="250">
-    <Grid Background="White">
-        <TextBox x:Name="txtInput" VerticalContentAlignment="Center" Background="Transparent"
-                 TextChanged="txtInput_TextChanged" Padding="4,0,0,0" />
-        <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder}" FontSize="16" FontWeight="Light" 
-                   Foreground="DarkGray" VerticalAlignment="Center" Margin="5,0,0,0"
+    <Grid>
+        <Border CornerRadius="10" BorderThickness="2" BorderBrush="#7D619B" Background="White">
+            <Grid>
+                <TextBox x:Name="txtInput" VerticalContentAlignment="Center" Background="Transparent"
+                 TextChanged="txtInput_TextChanged" BorderThickness="0" Padding="4,0,0,0" />
+                <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder}" FontSize="16" FontWeight="Light" 
+                   Foreground="#604184" VerticalAlignment="Center" Margin="5,0,0,0"
                    Panel.ZIndex="-1"/>
-        <Button x:Name="btnClear" Width="30" HorizontalAlignment="Right" Content="X" 
-                Background="Transparent" Foreground="LightGray" BorderThickness="0"
-                Click="btnClear_Click"/>
-        
+                <Button x:Name="btnClear" Width="40" Height="30" HorizontalAlignment="Right" 
+                    Background="Transparent" BorderThickness="0" Click="btnClear_Click"
+                    Focusable="False" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter/>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image Source="/images/clear-removebg-preview.png" Stretch="Uniform"/>
+                </Button>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>
