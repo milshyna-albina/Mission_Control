@@ -11,10 +11,10 @@
             <Grid>
                 <TextBox x:Name="txtInput" VerticalContentAlignment="Center" Background="Transparent"
                  TextChanged="txtInput_TextChanged" BorderThickness="0" Padding="4,0,0,0" />
-                <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder}" FontSize="16" FontWeight="Light" 
+                <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder}" FontSize="25" FontWeight="Light" 
                    Foreground="#604184" VerticalAlignment="Center" Margin="5,0,0,0"
                    Panel.ZIndex="-1"/>
-                <Button x:Name="btnClear" Width="40" Height="30" HorizontalAlignment="Right" 
+                <Button x:Name="btnClear" Width="50" Height="30" HorizontalAlignment="Right" 
                     Background="Transparent" BorderThickness="0" Click="btnClear_Click"
                     Focusable="False" Cursor="Hand">
                     <Button.Template>
@@ -22,7 +22,7 @@
                             <ContentPresenter/>
                         </ControlTemplate>
                     </Button.Template>
-                    <Image Source="/images/clear-removebg-preview.png" Stretch="Uniform"/>
+                    <Image Source="/images/delete.png" Stretch="Uniform" Width="40" Height="40"/>
                 </Button>
             </Grid>
         </Border>

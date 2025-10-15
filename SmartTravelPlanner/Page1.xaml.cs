@@ -10,18 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SmartTravelPlanner
 {
-    /// <summary>
-    /// Логика взаимодействия для Window2.xaml
-    /// </summary>
-    public partial class Window2 : Window
+    public partial class Page1 : Page
     {
-        public Window2()
+        public Page1()
         {
             InitializeComponent();
+        }
+        private void ContinueButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Page2());
         }
     }
 }
