@@ -43,7 +43,7 @@
             </StackPanel>
         </Button>
         <Button Grid.Row="5" Width="200" Height="50" HorizontalAlignment="Center" Margin="0,30,0,0"
-        Background="#7658B2" BorderThickness="0" Cursor="Hand">
+        Background="#7658B2" BorderThickness="0" Cursor="Hand" Click="ContinueButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border CornerRadius="15"

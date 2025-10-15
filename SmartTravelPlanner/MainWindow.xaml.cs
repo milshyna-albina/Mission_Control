@@ -24,5 +24,12 @@ namespace SmartTravelPlanner
         {
             InitializeComponent();
         }
+        private void ContinueButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 next = new Window2(); 
+            next.Show();                 
+            this.Close();                 
+        }
+
     }
 }
