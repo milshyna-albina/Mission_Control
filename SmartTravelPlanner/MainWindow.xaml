@@ -8,8 +8,12 @@
         mc:Ignorable="d"
         Background="#E6E2F3"
         FontFamily="Georgia"
-        Title="Traveler's Adventure" Height="450" Width="800" ResizeMode="CanMinimize">
+        Title="Traveler's Adventure" Height="1080" Width="1920" ResizeMode="CanMinimize">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="511*"/>
+            <ColumnDefinition Width="289*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -19,13 +23,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Height="40" Text="WELCOME TO" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"
-                   Margin="0,20,0,0" Foreground="#7243A9" FontWeight="Bold"/>
-        <TextBlock Grid.Row="1" Height="40" Text="Taveler's Adventure" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"
-                    Margin="0,0,0,30" Foreground="#7243A9" FontWeight="Bold"/>
-        <UserTextBox:TextBox Grid.Row="2" Width="250" Height="40" HorizontalAlignment="Center" Placeholder="Enter name"/>
-        <UserTextBox:TextBox Grid.Row="3" Width="250" Height="40" HorizontalAlignment="Center" Margin="0,10,0,0" Placeholder="Enter location"/>
-        <Button Grid.Row="4" Width="150" Height="40" HorizontalAlignment="Center" Margin="0,10,0,0"
+        <TextBlock Grid.Row="0" Height="40" Text="WELCOME TO" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Left"
+                   Margin="332,20,0,0" Foreground="#7243A9" FontWeight="Bold"/>
+        <TextBlock Grid.Row="1" Height="40" Text="Taveler's Adventure" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left"
+                    Margin="245,0,0,0" Foreground="#7243A9" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <UserTextBox:TextBox Grid.Row="2" Width="250" Height="40" HorizontalAlignment="Left" Placeholder="Enter name" Grid.ColumnSpan="2" Margin="275,0,0,0"/>
+        <UserTextBox:TextBox Grid.Row="3" Width="250" Height="40" HorizontalAlignment="Left" Margin="275,10,0,0" Placeholder="Enter location" Grid.ColumnSpan="2"/>
+        <Button Grid.Row="4" Width="150" Height="40" HorizontalAlignment="Left" Margin="325,10,0,0"
         Background="White" BorderThickness="0" Cursor="Hand">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -42,7 +46,7 @@
                 <TextBlock Text="Load Map" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
             </StackPanel>
         </Button>
-        <Button Grid.Row="5" Width="200" Height="50" HorizontalAlignment="Center" Margin="0,30,0,0"
+        <Button Grid.Row="5" Width="200" Height="50" HorizontalAlignment="Left" Margin="300,30,0,0"
         Background="#7658B2" BorderThickness="0" Cursor="Hand" Click="ContinueButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -56,7 +60,7 @@
             </Button.Template>
             <TextBlock Text="Plan Route" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White"/>
         </Button>
-        <Button Grid.Row="6" Width="100" Height="40" HorizontalAlignment="Right" Margin="0,10,20,0">
+        <Button Grid.Row="6" Width="100" Height="40" HorizontalAlignment="Right" Margin="0,10,20,0" Grid.Column="1">
             <TextBlock Text="Exit" VerticalAlignment="Center"/>
         </Button>
     </Grid>
