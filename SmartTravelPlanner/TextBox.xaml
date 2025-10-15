@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="250">
     <Grid>
-        <Border CornerRadius="10" BorderThickness="2" BorderBrush="#7D619B" Background="White">
+        <Border CornerRadius="10" BorderThickness="3" BorderBrush="#7D619B" Background="White">
             <Grid>
                 <TextBox x:Name="txtInput" VerticalContentAlignment="Center" Background="Transparent"
                  TextChanged="txtInput_TextChanged" BorderThickness="0" Padding="4,0,0,0" />
