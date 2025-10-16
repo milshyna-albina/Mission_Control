@@ -37,7 +37,7 @@ namespace SmartTravelPlanner
         {
             MessageBoxResult result = MessageBox.Show(
                 "Вы Альбина Малышина?",
-                "how dare u...",
+                "придется признать...",
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
 
