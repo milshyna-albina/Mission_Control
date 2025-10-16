@@ -24,5 +24,25 @@ namespace SmartTravelPlanner
         {
             InitializeComponent();
         }
+        private void ContinueButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.GoBack();
+        }
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(
+                "ARE U LEAVING US???",     
+                "how dare u...",         
+                MessageBoxButton.YesNo,       
+                MessageBoxImage.Question);     
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown(); 
+            }
+        }
+
+
     }
+
 }

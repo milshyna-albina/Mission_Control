@@ -9,11 +9,12 @@
             <RowDefinition Height="120"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="120"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="WELCOME TO" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center"
-                   Foreground="#7243A9" FontWeight="Bold" Margin="0,40,0,0"/>
+        <TextBlock Grid.Row="0" Text="WELCOME TO" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center"
+                   Foreground="#7243A9" FontWeight="Bold" Margin="0,57,0,0"/>
 
         <TextBlock Grid.Row="1" Text="Traveler's Adventure" FontSize="60" VerticalAlignment="Center" HorizontalAlignment="Center"
                    Foreground="#7243A9" FontWeight="Bold"/>
@@ -21,51 +22,54 @@
         <UserTextBox:TextBox x:Name="NameTextBox" Grid.Row="2" HorizontalAlignment="Center" Placeholder="Enter name" Margin="0,10,0,0"/>
         <UserTextBox:TextBox x:Name="LocationTextBox" Grid.Row="3" HorizontalAlignment="Center" Placeholder="Enter location"/>
 
-    <Button Grid.Row="4" Width="300" Height="80" HorizontalAlignment="Center"
-                Background="White" BorderThickness="0" Cursor="Hand">
-        <Button.Template>
-            <ControlTemplate TargetType="Button">
-                <Border CornerRadius="15"
+        <Button Grid.Row="4" Width="300" Height="80" HorizontalAlignment="Center"
+                Background="White" BorderThickness="0" Cursor="Hand" Margin="0,20,0,20">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="15"
                             BorderThickness="5"
                             BorderBrush="#7D619B"
                             Background="{TemplateBinding Background}">
-                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Border>
-            </ControlTemplate>
-        </Button.Template>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image Source="/images/load_map.png" Width="50" Height="50" Margin="0,0,8,0"/>
-            <TextBlock Text="Load Map" VerticalAlignment="Center" FontSize="35" FontWeight="Bold"/>
-        </StackPanel>
-    </Button>
-    <Button Grid.Row="5" Width="400" Height="100" HorizontalAlignment="Center"
-                Background="#7658B2" BorderThickness="0" Cursor="Hand" Click="ContinueButton_Click">
-        <Button.Template>
-            <ControlTemplate TargetType="Button">
-                <Border CornerRadius="15"
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="/images/load_map.png" Width="50" Height="50" Margin="0,0,8,0"/>
+                <TextBlock Text="Load Map" VerticalAlignment="Center" FontSize="35" Foreground="#604184" FontWeight="Bold"/>
+            </StackPanel>
+        </Button>
+        <Button Grid.Row="5" Width="400" Height="100" HorizontalAlignment="Center"
+                Background="#7658B2" BorderThickness="0" Cursor="Hand" Click="ContinueButton_Click" Grid.RowSpan="2">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="15"
                             BorderThickness="5"
                             BorderBrush="#604184"
                             Background="{TemplateBinding Background}">
-                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Border>
-            </ControlTemplate>
-        </Button.Template>
-        <TextBlock Text="Plan Route" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" Foreground="White"/>
-    </Button>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <TextBlock Text="Plan Route" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" Foreground="White"/>
+        </Button>
 
-    <Button Grid.Row="5" Width="150" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20"
-        Background="#7658B2" BorderThickness="0" Cursor="Hand">
-        <Button.Template>
-            <ControlTemplate TargetType="Button">
-                <Border CornerRadius="10" Background="{TemplateBinding Background}">
-                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </Border>
-            </ControlTemplate>
-        </Button.Template>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-            <TextBlock Text="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Foreground="White" Margin="0,0,8,0"/>
-            <Image Source="/images/exit.png" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-        </StackPanel>
-    </Button>
+        <Button Grid.Row="5" Width="150" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20"
+        Background="#7658B2" BorderThickness="0" Cursor="Hand" Grid.RowSpan="2" Click="ExitButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" 
+                            BorderThickness="5"
+                            BorderBrush="#604184"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Foreground="White" Margin="0,0,8,0"/>
+                <Image Source="/images/exit.png" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>

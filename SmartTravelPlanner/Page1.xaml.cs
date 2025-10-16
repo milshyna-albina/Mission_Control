@@ -32,5 +32,19 @@ namespace SmartTravelPlanner
             }
             this.NavigationService.Navigate(new Page2());
         }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(
+                "Вы Альбина Малышина?",
+                "how dare u...",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+        }
     }
 }
