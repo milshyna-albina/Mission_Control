@@ -42,14 +42,33 @@ namespace SmartTravelPlanner
 
         private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtInput.Text))
+            tbPlaceholder.Visibility = string.IsNullOrEmpty(txtInput.Text) ? Visibility.Visible : Visibility.Hidden;
+
+            if (!string.IsNullOrWhiteSpace(txtInput.Text))
             {
-                tbPlaceholder.Visibility = Visibility.Visible;
+                tbError.Visibility = Visibility.Collapsed;
+                borderInput.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#7D619B"));
+            }
+        }
+
+        public bool Validate()
+        {
+            if (string.IsNullOrWhiteSpace(txtInput.Text))
+            {
+                tbError.Visibility = Visibility.Visible;
+                borderInput.BorderBrush = Brushes.Red;
+                borderInput.BorderThickness = new Thickness(3);
+                return false;
             }
             else
             {
-                tbPlaceholder.Visibility = Visibility.Hidden;
+                tbError.Visibility = Visibility.Collapsed;
+                borderInput.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#7D619B"));
+                borderInput.BorderThickness = new Thickness(3);
+
+                return true;
             }
         }
+        public string Text => txtInput.Text;
     }
 }

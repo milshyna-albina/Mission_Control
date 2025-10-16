@@ -23,6 +23,13 @@ namespace SmartTravelPlanner
         }
         private void ContinueButton_Click(object sender, RoutedEventArgs e)
         {
+            bool validName = NameTextBox.Validate();
+            bool validLocation = LocationTextBox.Validate();
+
+            if (!validName || !validLocation)
+            {
+                return;
+            }
             this.NavigationService.Navigate(new Page2());
         }
     }
