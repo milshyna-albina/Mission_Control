@@ -9,7 +9,7 @@
             <RowDefinition Height="120"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="120"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -39,37 +39,19 @@
                 <TextBlock Text="Load Map" VerticalAlignment="Center" FontSize="35" Foreground="#604184" FontWeight="Bold"/>
             </StackPanel>
         </Button>
+
         <Button Grid.Row="5" Width="400" Height="100" HorizontalAlignment="Center"
-                Background="#7658B2" BorderThickness="0" Cursor="Hand" Click="ContinueButton_Click" Grid.RowSpan="2">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="15"
-                            BorderThickness="5"
-                            BorderBrush="#604184"
-                            Background="{TemplateBinding Background}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
+            Style="{StaticResource PurpleButtonStyle}" Click="ContinueButton_Click" Margin="0,30,0,0">
             <TextBlock Text="Plan Route" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" Foreground="White"/>
         </Button>
 
-        <Button Grid.Row="5" Width="150" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20"
-        Background="#7658B2" BorderThickness="0" Cursor="Hand" Grid.RowSpan="2" Click="ExitButton_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="10" 
-                            BorderThickness="5"
-                            BorderBrush="#604184"
-                            Background="{TemplateBinding Background}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
+        <Button Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20"
+            Style="{StaticResource SmallPurpleButtonStyle}" Click="ExitButton_Click">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <TextBlock Text="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Foreground="White" Margin="0,0,8,0"/>
-                <Image Source="/images/exit.png" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="Exit " FontSize="30" Foreground="White"/>
+                <Image Source="/images/exit.png" Width="40" Height="40"/>
             </StackPanel>
         </Button>
+
     </Grid>
 </Page>

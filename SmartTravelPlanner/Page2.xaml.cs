@@ -24,7 +24,7 @@ namespace SmartTravelPlanner
         {
             InitializeComponent();
         }
-        private void ContinueButton_Click(object sender, RoutedEventArgs e)
+        private void ReturnButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.GoBack();
         }
